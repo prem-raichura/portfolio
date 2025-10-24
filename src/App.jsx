@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { Analytics } from "@vercel/analytics/next"
 import Loader from './components/Loader';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+    <Analytics />
       <AnimatePresence>
         {loading && <Loader onLoadingComplete={() => setLoading(false)} />}
       </AnimatePresence>

@@ -27,7 +27,7 @@ const skillsData = [
   {
     icon: <Cloud size={32} className="text-highlight" />,
     title: "DevOps & Cloud",
-    skills: ["Git", "GitHub Actions (CI/CD)", "Vercel"],
+    skills: ["Git", "GitHub", "Vercel"],
   },
   {
     icon: <Code size={32} className="text-highlight" />,

@@ -6,6 +6,14 @@ import { Github, ExternalLink, BookOpen, Code2 } from "lucide-react";
 // ------------------ COMBINED DATA ------------------
 const timelineData = [
   {
+    type: "publication",
+    title: "TrafficEye: Intelligent Traffic Optimization Using Deep Learning Approach",
+    description: `Published in IEEE 2025 International Conference on Artificial Intelligence and Machine Vision (AIMV).\nAuthors: Prem Raichura, Charmi Padh, Rohan Thakar, Zalak Vachhani, Himani Trivedi.`,
+    tags: ["YOLO", "Deep Learning", "Vehicle Detection"],
+    githubLink: null,
+    liveLink: "https://doi.org/10.1109/AIMV66517.2025.11203522",
+  },
+  {
     type: "project",
     title: "Prompt-Injection-Prevention",
     description:
@@ -20,7 +28,7 @@ const timelineData = [
     description:
       "Official website for WealthEquity, a financial education and equity research platform, featuring responsive design, smooth animations, and modern glassmorphism UI built with React, Vite, and Tailwind CSS.",
     tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
-    githubLink: "https://github.com/prem-raichura/wealthequity-website",
+    githubLink: null,
     liveLink: "https://wealthequity-website.vercel.app/",
   },
   {
@@ -65,7 +73,7 @@ const TimelineItem = ({ item, index }) => {
           animate={inView ? "visible" : "hidden"}
         >
           <div className="flex justify-between items-start mb-4">
-            <h3 className="text-xl font-bold text-text flex items-center gap-2">
+            <h3 className="text-2xl font-bold text-text flex items-center gap-2">
               {item.type === "publication" && (
                 <BookOpen size={20} className="text-blue-400" />
               )}
@@ -98,7 +106,9 @@ const TimelineItem = ({ item, index }) => {
             </div>
           </div>
 
-          <p className="text-accent mb-6">{item.description}</p>
+          <p className="text-accent mb-6 font-mono" style={{ whiteSpace: "pre-line" }}>
+            {item.description}
+          </p>
 
           <div className="flex flex-wrap gap-2">
             {item.tags.map((tag) => (
