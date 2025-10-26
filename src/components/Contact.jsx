@@ -54,7 +54,7 @@ const Contact = () => {
           className="text-lg text-accent mb-12 max-w-2xl mx-auto"
           variants={{ hidden: { opacity: 0, y: -20 }, visible: { opacity: 1, y: 0, transition: { delay: 0.2 } } }}
         >
-          Ready to discuss your next project? Let's connect—my inbox is always open.
+          Ready to discuss your next project? <br /> Let's connect - my inbox is always open.
         </motion.p>
 
         {/* Contact Cards */}
