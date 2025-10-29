@@ -34,7 +34,7 @@ const contactLinks = [
   {
     title: "Google Scholar",
     value: "Prem Raichura",
-    href: "https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID", // replace with your actual Scholar link
+    href: "https://scholar.google.com/citations?user=-nfY-p8AAAAJ&hl=en&oi=ao",
     icon: GraduationCap,
     color: "text-yellow-500"
   },
