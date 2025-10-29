@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Linkedin, Github, BookOpen, Instagram, Twitter, Mail } from 'lucide-react'; // Imported Mail icon
+import { Linkedin, Github, BookOpen, Instagram, Twitter, Mail,GraduationCap } from 'lucide-react'; // Imported Mail icon
 
 // Data for social icons
 const socialLinks = [
   { 
-    icon: Github, 
-    label: 'GitHub', 
-    href: "https://github.com/prem-raichura", 
+    icon: Mail,
+    label: 'Email', 
+    href: "mailto:premraichura7@gmail.com",
   },
   { 
     icon: Linkedin, 
@@ -15,24 +15,24 @@ const socialLinks = [
     href: "https://www.linkedin.com/in/prem-raichura", 
   },
   { 
-    icon: Mail,
-    label: 'Email', 
-    href: "mailto:premraichura7@gmail.com",
+    icon: Github, 
+    label: 'GitHub', 
+    href: "https://github.com/prem-raichura", 
+  },
+  { 
+    icon: BookOpen, 
+    label: 'ORCID', 
+    href: "https://orcid.org/0009-0000-4289-1276", 
+  },
+  { 
+    icon: GraduationCap, 
+    label: 'Google Scholar', 
+    href: "https://scholar.google.com/citations?user=-nfY-p8AAAAJ&hl=en&oi=ao",
   },
   { 
     icon: Instagram, 
     label: 'Instagram', 
     href: "https://www.instagram.com/_.prem___7/",
-  },
-  // { 
-  //   icon: Twitter, 
-  //   label: 'X (Twitter)', 
-  //   href: "https://x.com/your-username",
-  // },
-  { 
-    icon: BookOpen, 
-    label: 'ORCID', 
-    href: "https://orcid.org/0009-0000-4289-1276", 
   },
 ];
 
