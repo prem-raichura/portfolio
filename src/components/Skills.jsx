@@ -17,12 +17,12 @@ const skillsData = [
   {
     icon: <BrainCircuit size={32} className="text-highlight" />,
     title: "AI & Machine Learning",
-    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "Pandas", "NumPy", "OpenCv"],
+    skills: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "OpenCv"],
   },
   {
     icon: <Database size={32} className="text-highlight" />,
     title: "Databases",
-    skills: ["MongoDB", "MySQL", "Firebase"],
+    skills: ["MySQL", "Firebase"],
   },
   {
     icon: <Cloud size={32} className="text-highlight" />,
