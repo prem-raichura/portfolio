@@ -15,6 +15,15 @@ const timelineData = [
   },
   {
     type: "project",
+    title: "TrafficEye",
+    description:
+      "Custom-trained YOLOv5, YOLOv7, YOLOv4, and YOLOv8 models on the IITMHETRA dataset for real-time vehicle detection and traffic density analysis.",
+    tags: ["YOLO", "AI/ML", "Deep Learning", "OpenCV"],
+    githubLink: "https://github.com/prem-raichura/TrafficEye",
+    liveLink: null,
+  },
+  {
+    type: "project",
     title: "Prompt-Injection-Prevention",
     description:
       "A hybrid AI tool that detects unsafe prompts using rules and a machine learning model to prevent misuse of LLMs.",
