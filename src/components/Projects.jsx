@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Github, ExternalLink, BookOpen, Code2, Cpu } from "lucide-react";
+import { Github, ExternalLink, BookOpen, Code2, Cpu, Globe, Layout } from "lucide-react";
 
 // ------------------ COMBINED DATA ------------------
 const timelineData = [
@@ -14,8 +14,8 @@ const timelineData = [
     liveLink: "https://doi.org/10.1109/AIMV66517.2025.11203522",
   },
   {
-    type: "project",
-    title: "Traffic density & detection app",
+    type: "webapp",
+    title: "Traffic density & detection web app",
     description:
       "An AI-powered web application that uses the YOLOv5su model trained on the IITMhetra dataset to detect and analyze vehicles in uploaded images or videos — built for accurate, real-time-capable traffic monitoring.",
     tags: ["FastAPI", "React", "Vite","YOLOv5","Traffic Analysis", "Vehicle Detection", "AI/ML"],
@@ -32,7 +32,7 @@ const timelineData = [
     liveLink: null,
   },
   {
-    type: "project",
+    type: "models",
     title: "Prompt-Injection-Prevention",
     description:
       "A hybrid AI tool that detects unsafe prompts using rules and a machine learning model to prevent misuse of LLMs.",
@@ -41,7 +41,7 @@ const timelineData = [
     liveLink: null,
   },
   {
-    type: "project",
+    type: "website",
     title: "WealthEquity Website",
     description:
       "Official website for WealthEquity, a financial education and equity research platform, featuring responsive design, smooth animations, and modern glassmorphism UI built with React, Vite, and Tailwind CSS.",
@@ -50,7 +50,7 @@ const timelineData = [
     liveLink: "https://wealthequity-website.vercel.app/",
   },
   {
-    type: "project",
+    type: "website",
     title: "Bolton Real Estate Website",
     description:
       "A fully responsive real estate website showcasing property listings, detailed property pages, and contact functionality, built for a seamless user experience with modern web design principles.",
@@ -100,6 +100,12 @@ const TimelineItem = ({ item, index }) => {
               )}
               {item.type === "models" && (
                 <Cpu size={20} className="text-yellow-400" />
+              )}
+              {item.type === "webapp" && (
+                <Globe size={20} className="text-indigo-500" />
+              )}
+              {item.type === "website" && (
+                <Layout size={20} className="text-cyan-500" />
               )}
               {item.title}
             </h3>
