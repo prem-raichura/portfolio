@@ -23,6 +23,15 @@ const timelineData = [
     liveLink: "https://vehicle-density-and-detection-app.vercel.app/",
   },
   {
+    type: "website",
+    title: "WealthEquity Website",
+    description:
+      "Official website for WealthEquity, a financial education and equity research platform, featuring responsive design, smooth animations, and modern glassmorphism UI built with React, Vite, and Tailwind CSS.",
+    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
+    githubLink: null,
+    liveLink: "https://wealthequity-website.vercel.app/",
+  },
+  {
     type: "models",
     title: "TrafficEye models",
     description:
@@ -39,15 +48,6 @@ const timelineData = [
     tags: ["AI Safety", "Machine Learning", "Prompt Filtering"],
     githubLink: "https://github.com/prem-raichura/Prompt-Injection-Prevention",
     liveLink: null,
-  },
-  {
-    type: "website",
-    title: "WealthEquity Website",
-    description:
-      "Official website for WealthEquity, a financial education and equity research platform, featuring responsive design, smooth animations, and modern glassmorphism UI built with React, Vite, and Tailwind CSS.",
-    tags: ["React", "Vite", "Tailwind CSS", "Framer Motion", "Vercel"],
-    githubLink: null,
-    liveLink: "https://wealthequity-website.vercel.app/",
   },
   {
     type: "website",
