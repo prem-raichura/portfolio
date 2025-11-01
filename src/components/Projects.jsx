@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Github, ExternalLink, BookOpen, Code2 } from "lucide-react";
+import { Github, ExternalLink, BookOpen, Code2, Cpu } from "lucide-react";
 
 // ------------------ COMBINED DATA ------------------
 const timelineData = [
@@ -23,7 +23,7 @@ const timelineData = [
     liveLink: "https://vehicle-density-and-detection-app.vercel.app/",
   },
   {
-    type: "project",
+    type: "models",
     title: "TrafficEye models",
     description:
       "Custom-trained YOLOv5, YOLOv7, YOLOv4, and YOLOv8 models on the IITMHETRA dataset for real-time vehicle detection and traffic density analysis.",
@@ -97,6 +97,9 @@ const TimelineItem = ({ item, index }) => {
               )}
               {item.type === "project" && (
                 <Code2 size={20} className="text-green-400" />
+              )}
+              {item.type === "models" && (
+                <Cpu size={20} className="text-yellow-400" />
               )}
               {item.title}
             </h3>
