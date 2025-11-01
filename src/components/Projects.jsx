@@ -15,7 +15,7 @@ const timelineData = [
   },
   {
     type: "project",
-    title: "Traffic dencity & detection",
+    title: "Traffic density & detection",
     description:
       "An AI-powered web application that uses the YOLOv5su model trained on the IITMhetra dataset to detect and analyze vehicles in uploaded images or videos — built for accurate, real-time-capable traffic monitoring.",
     tags: ["FastAPI", "React", "Vite","YOLOv5","Traffic Analysis", "Vehicle Detection", "AI/ML"],
