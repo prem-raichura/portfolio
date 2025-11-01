@@ -19,8 +19,8 @@ const timelineData = [
     description:
       "An AI-powered web application that uses the YOLOv5su model trained on the IITMhetra dataset to detect and analyze vehicles in uploaded images or videos — built for accurate, real-time-capable traffic monitoring.",
     tags: ["FastAPI", "React", "Vite","YOLOv5","Traffic Analysis", "Vehicle Detection", "AI/ML"],
-    githubLink: "https://github.com/prem-raichura/Vehicle-Dencity-and-Detection-App",
-    liveLink: "https://vehicle-dencity-and-detection-app.vercel.app/",
+    githubLink: "https://github.com/prem-raichura/Vehicle-Density-and-Detection-App",
+    liveLink: "https://vehicle-density-and-detection-app.vercel.app/",
   },
   {
     type: "project",
