@@ -18,3 +18,29 @@
     overflow-x: hidden;
   }
 }
+
+/* Inside your global.css or index.css */
+.scrollbar-custom {
+  scrollbar-width: thin;
+  scrollbar-color: #00b3ff33 transparent;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+  margin: 6px; /* ensures scrollbar stays inside the modal */
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #00c3ff, #0066ff);
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #00e6ff, #007bff);
+}
