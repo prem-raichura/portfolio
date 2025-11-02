@@ -85,7 +85,7 @@ const Hero = () => {
             >
               <ArrowUpRight size={18} />
               Resume
-            </a> */}
+            </a>  */}
 
             {/* GitHub Button - Full width on mobile (w-full), standard width on small screens (sm:w-auto) */}
             <a
