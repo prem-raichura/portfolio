@@ -330,7 +330,7 @@ const Projects = () => {
                     onClick={() => setFilter(cat)}
                     layout
                     transition={{ type: "spring", stiffness: 300, damping: 26 }}
-                    className={`relative px-5 py-2.5 text-md rounded-full font-semibold transition-all duration-300 
+                    className={`relative px-5 py-2.5 text-lg rounded-full font-semibold transition-all duration-300 
                       ${filter === cat ? "text-white" : "text-accent hover:text-highlight"} 
                       after:content-[''] after:absolute after:left-1/2 after:bottom-[8px] after:h-[2px] after:w-[65%] 
                       after:-translate-x-1/2 after:bg-current after:rounded-full 
