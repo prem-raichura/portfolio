@@ -48,7 +48,7 @@ const MultiColorShape = () => {
 
 const Hero = () => {
   return (
-    <section id="home" className="h-screen w-full relative overflow-hidden bg-[#0b0f19]">
+    <section id="home" className="h-screen w-full relative overflow-hidden">
       <div className="container mx-auto max-w-6xl h-full flex flex-col md:flex-row items-center justify-center md:justify-between px-4 md:px-8">
         
         {/* Left Column */}
@@ -103,7 +103,11 @@ const Hero = () => {
 
         {/* Right Column */}
         <div className="relative w-full md:w-2/5 h-1/2 md:h-full">
-          <Canvas className="absolute inset-0 z-0">
+          <Canvas 
+            gl={{ alpha: true }} 
+            style={{ background: 'transparent' }} 
+            className="absolute inset-0 z-0"
+          >
             <Suspense fallback={null}>
               <ambientLight intensity={0.2} />
               <pointLight position={[10, 10, 10]} intensity={1.0} />

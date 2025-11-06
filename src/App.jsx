@@ -9,6 +9,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PlexusBackground from './components/PlexusBackground';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -21,6 +22,7 @@ function App() {
       </AnimatePresence>
       {!loading && (
         <>
+          <PlexusBackground />
           <Navbar />
           <main className="pt-20 md:pt-0">
             <Hero />

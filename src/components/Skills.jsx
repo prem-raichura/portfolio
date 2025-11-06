@@ -84,7 +84,7 @@ const SkillCard = ({ category, index }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 md:py-32 bg-background">
+    <section id="skills" className="py-20 md:py-32 bg-deepblack">
       <motion.div
         className="container mx-auto max-w-6xl px-4 md:px-8"
         initial="hidden"

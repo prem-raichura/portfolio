@@ -8,6 +8,7 @@ export default {
         sans: ["Caveat", "cursive"], 
       },
       colors: {
+        deepblack: "#000000",
         background: "#0A0F19", // Deep Space Blue
         primary: "#111827",    // Dark Slate
         secondary: "#1F2937",   // Lighter Slate

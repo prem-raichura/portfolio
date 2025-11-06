@@ -202,7 +202,7 @@ const Projects = () => {
   const topFour = timelineData.slice(0, 4);
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-background">
+    <section id="projects" className="py-20 md:py-32 bg-deepblack">
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <motion.h2
           className="text-5xl font-bold text-center mb-16 flex items-center justify-center gap-3 font-handwritten"
@@ -301,7 +301,7 @@ const Projects = () => {
       <AnimatePresence>
         {showModal && (
           <motion.div
-            className="fixed inset-0 bg-black/70 backdrop-blur-md flex justify-center items-center z-50 p-4"
+            className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-50 p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -313,7 +313,7 @@ const Projects = () => {
               initial={{ opacity: 0, scale: 0.92, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 30 }}
-              className="bg-gradient-to-b from-secondary/90 to-primary/90 rounded-3xl p-8 max-w-6xl w-full max-h-[90vh] overflow-y-auto relative border border-white/10 shadow-2xl backdrop-blur-xl scrollbar-custom"
+              className="bg-gradient-to-b from-secondary/80 to-primary/80 rounded-3xl p-8 max-w-6xl w-full max-h-[90vh] overflow-y-auto relative border border-white/10 shadow-2xl backdrop-blur-xl scrollbar-custom"
             >
               <button
                 onClick={() => setShowModal(false)}
