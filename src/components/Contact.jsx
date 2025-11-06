@@ -64,7 +64,6 @@ const Contact = () => {
           Ready to discuss your next project? <br /> Let's connect - my inbox is always open.
         </motion.p>
 
-        {/* Contact Cards */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-2 md:gap-6">
           {contactLinks.map((link, i) => (
             <motion.a

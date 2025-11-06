@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, Github } from "lucide-react";
 import * as THREE from "three";
 
-// MultiColorShape component remains the same
-
 const MultiColorShape = () => {
   const meshRef = useRef();
   const [scale, setScale] = useState(window.innerWidth < 768 ? 1.5 : 1.8);
@@ -70,14 +68,13 @@ const Hero = () => {
             A Backend Developer Architecting Robust Systems.
           </motion.p>
 
-          {/* --- MODIFICATION START: Ensures proper stacking and alignment on mobile/desktop --- */}
           <motion.div
             className="mt-8 flex flex-col sm:flex-row gap-4 w-full justify-center md:justify-start"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
           >
-            {/* Resume Button - Full width on mobile (w-full), standard width on small screens (sm:w-auto) */}
+            {/* Resume Button */}
             {/* <a
               href="/resume.pdf" 
               download
@@ -87,7 +84,7 @@ const Hero = () => {
               Resume
             </a>  */}
 
-            {/* GitHub Button - Full width on mobile (w-full), standard width on small screens (sm:w-auto) */}
+            {/* GitHub Button */}
             <a
               href="https://github.com/prem-raichura"
               target="_blank"
@@ -98,7 +95,6 @@ const Hero = () => {
               GitHub
             </a>
           </motion.div>
-          {/* --- MODIFICATION END --- */}
         </div>
 
         {/* Right Column */}

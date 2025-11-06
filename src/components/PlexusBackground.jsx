@@ -24,7 +24,7 @@ const PlexusPoints = ({ count = 150, maxDistance = 3.5, mouse }) => {
   }, [count]);
 
   const linePositions = useMemo(() => {
-    return new Float32Array(count * count * 6); // Max possible lines
+    return new Float32Array(count * count * 6);
   }, [count]);
 
   // For 3D mouse interaction
@@ -43,19 +43,17 @@ const PlexusPoints = ({ count = 150, maxDistance = 3.5, mouse }) => {
     const positions = pointsRef.current.geometry.attributes.position.array;
     const lines = linesRef.current.geometry.attributes.position.array;
     let lineCount = 0;
-    const time = state.clock.getElapsedTime() * 0.1; // Time factor for curl noise
+    const time = state.clock.getElapsedTime() * 0.1;
 
     for (let i = 0; i < count; i++) {
       const p = particles[i].position;
       const v = particles[i].velocity;
 
-      // --- MODIFICATION START: Continuous Curl Noise Field speed reduced ---
       const curlForce = new THREE.Vector3(
         Math.sin(p.y * 0.5 + time),
         Math.cos(p.x * 0.5 + time),
         Math.sin(p.z * 0.5 + time)
       ).multiplyScalar(0.0005); // SPEED REDUCED EVEN MORE
-      // --- MODIFICATION END ---
       v.add(curlForce);
 
       // Mouse repulsion
@@ -113,7 +111,7 @@ const PlexusPoints = ({ count = 150, maxDistance = 3.5, mouse }) => {
         </bufferGeometry>
         <pointsMaterial 
           color="#00E5FF" 
-          emissive="#00E5FF" // Make it glow
+          emissive="#00E5FF"
           emissiveIntensity={1.5}
           size={0.08} 
           sizeAttenuation 
@@ -145,10 +143,10 @@ const PlexusBackground = () => {
         <PlexusPoints mouse={mouse} />
         <EffectComposer>
           <Bloom 
-            intensity={0.4} // The strength of the glow
-            luminanceThreshold={0} // Makes all bright things glow
+            intensity={0.4}
+            luminanceThreshold={0}
             luminanceSmoothing={0.5}
-            mipmapBlur // Improves quality
+            mipmapBlur
           />
         </EffectComposer>
       </Canvas>

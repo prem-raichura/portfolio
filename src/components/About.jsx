@@ -12,7 +12,6 @@ const codeComments = [
 ];
 
 const About = () => {
-  // 3D Hover Effect Logic (unchanged)
   const cardRef = useRef(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);
@@ -26,7 +25,6 @@ const About = () => {
   };
   const handleMouseLeave = () => { x.set(0); y.set(0); };
 
-  // Animated Text Cycler Logic (unchanged)
   const [currentIndex, setCurrentIndex] = useState(0);
   useEffect(() => {
     const interval = setInterval(() => {
@@ -35,7 +33,6 @@ const About = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Animation variants for the carousel effect (unchanged)
   const textAnimationVariants = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 150, damping: 20 } },
@@ -51,7 +48,6 @@ const About = () => {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ staggerChildren: 0.3 }}
       >
-        {/* Left Column (unchanged) */}
         <motion.div 
           className="flex flex-col justify-center"
           variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}
@@ -78,7 +74,6 @@ const About = () => {
           </div>
         </motion.div>
 
-        {/* Right Column: Holographic Code Terminal */}
         <motion.div 
           ref={cardRef}
           className="relative h-full"
@@ -92,11 +87,8 @@ const About = () => {
             className="relative h-full bg-secondary/60 backdrop-blur-xl rounded-xl p-6 border border-white/10 font-mono text-base text-accent shadow-2xl ring-1 ring-inset ring-white/10 flex flex-col"
             style={{ transform: 'translateZ(40px)' }}
           >
-            {/* --- MODIFICATION START: The three colored dots have been removed --- */}
             <div className="mb-4 flex-shrink-0">
-              {/* This div is now empty but preserves spacing */}
             </div>
-            {/* --- MODIFICATION END --- */}
             
             <div className="text-left flex-grow flex items-center" style={{ transform: 'translateZ(20px)' }}>
               <AnimatePresence mode="wait">

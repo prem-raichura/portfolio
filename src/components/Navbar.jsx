@@ -38,9 +38,7 @@ const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
-        {/* --- MODIFICATION START: Added max-w-6xl to this container to align with other sections --- */}
         <div className="container mx-auto max-w-6xl bg-primary/50 backdrop-blur-lg rounded-xl flex justify-between items-center p-4 border border-white/10">
-        {/* --- MODIFICATION END --- */}
           
           <a href="#home" className="relative inline-block">
             <span className="text-4xl font-bold text-text font-handwritten">
