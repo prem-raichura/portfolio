@@ -6,6 +6,7 @@ const navLinks = [
   { title: "About", href: "#about" },
   { title: "Skills", href: "#skills" },
   { title: "Projects", href: "#projects" },
+  { title: "Achievements", href: "#achievements" },
   { title: "Contact", href: "#contact" },
 ];
 
@@ -38,7 +39,7 @@ const Navbar = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
       >
-        <div className="container mx-auto max-w-6xl bg-primary/50 backdrop-blur-lg rounded-xl flex justify-between items-center p-4 border border-white/10">
+        <div className="container mx-auto max-w-6xl bg-primary/60 backdrop-blur-lg rounded-xl flex justify-between items-center p-4 border border-white/10">
           
           <a href="#home" className="relative inline-block">
             <span className="text-4xl font-bold text-text font-handwritten">

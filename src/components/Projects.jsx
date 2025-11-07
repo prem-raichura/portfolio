@@ -202,7 +202,7 @@ const Projects = () => {
   const topFour = timelineData.slice(0, 4);
 
   return (
-    <section id="projects" className="py-20 md:py-32 bg-deepblack">
+    <section id="projects" className="py-20 md:py-32">
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <motion.h2
           className="text-5xl font-bold text-center mb-16 flex items-center justify-center gap-3 font-handwritten"
@@ -315,12 +315,15 @@ const Projects = () => {
               exit={{ opacity: 0, scale: 0.9, y: 30 }}
               className="bg-gradient-to-b from-secondary/80 to-primary/80 rounded-3xl p-8 max-w-6xl w-full max-h-[90vh] overflow-y-auto relative border border-white/10 shadow-2xl backdrop-blur-xl scrollbar-custom"
             >
-              <button
+
+              <motion.button
+                whileHover={{ scale: 1.15, rotate: 90 }}
+                whileTap={{ scale: 0.95 }}
                 onClick={() => setShowModal(false)}
-                className="absolute top-4 right-4 text-accent hover:text-highlight transition"
+                className="absolute top-4 right-4 text-accent hover:text-highlight transition z-20"
               >
                 <X size={26} />
-              </button>
+              </motion.button>
 
               {/* Filter Navbar (Unchanged, as requested) */}
               <div className="relative flex flex-wrap justify-center gap-3 mb-10 mt-4 p-3 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-inner">

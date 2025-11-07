@@ -40,7 +40,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-10 bg-primary border-t border-secondary/50">
+    <footer className="py-10 bg-primary/80 border-t border-secondary/50 relative z-50">
       {/* Container is critical for alignment with Hero/About sections */}
       <div className="container mx-auto max-w-6xl px-4 md:px-6">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4">

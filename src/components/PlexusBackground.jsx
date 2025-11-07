@@ -137,7 +137,7 @@ const PlexusBackground = () => {
   };
 
   return (
-    <div className="fixed inset-0 z-0" onMouseMove={handleMouseMove}>
+    <div className="fixed inset-0 -z-10" onMouseMove={handleMouseMove}>
       <Canvas camera={{ position: [0, 0, 15], fov: 75 }} >
         <ambientLight intensity={0.5} />
         <PlexusPoints mouse={mouse} />

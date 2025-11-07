@@ -26,8 +26,8 @@ const skillsData = [
   },
   {
     icon: <Cloud size={32} className="text-highlight" />,
-    title: "DevOps & Cloud",
-    skills: ["Git", "GitHub", "Vercel"],
+    title: "Version control",
+    skills: ["Git", "GitHub"],
   },
   {
     icon: <Code size={32} className="text-highlight" />,
@@ -84,7 +84,7 @@ const SkillCard = ({ category, index }) => {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 md:py-32 bg-deepblack">
+    <section id="skills" className="py-20 md:py-32">
       <motion.div
         className="container mx-auto max-w-6xl px-4 md:px-8"
         initial="hidden"
@@ -93,10 +93,10 @@ const Skills = () => {
         transition={{ staggerChildren: 0.1 }}
       >
         <motion.h2 
-          className="text-4xl font-bold text-center mb-16"
+          className="text-5xl font-bold text-center mb-16"
           variants={{ hidden: { opacity: 0, y: -50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
         >
-          My Technical Toolkit
+          My Technical Toolkit ⚙️
         </motion.h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

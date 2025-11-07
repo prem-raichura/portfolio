@@ -42,7 +42,7 @@ const contactLinks = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 md:py-32 bg-deepblack">
+    <section id="contact" className="py-20 md:py-32">
       <motion.div
         className="container mx-auto max-w-6xl px-4 md:px-6 text-center"
         initial="hidden"
