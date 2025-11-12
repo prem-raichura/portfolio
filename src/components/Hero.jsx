@@ -75,14 +75,14 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.9 }}
           >
             {/* Resume Button */}
-            {/* <a
-              href="/resume.pdf" 
+            <a
+              href="/images/resume.pdf" 
               download
               className="flex items-center justify-center w-full sm:w-auto gap-2 px-6 py-3 bg-white text-black font-medium rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300"
             >
               <ArrowUpRight size={18} />
               Resume
-            </a>  */}
+            </a> 
 
             {/* GitHub Button */}
             <a
