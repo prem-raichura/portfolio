@@ -76,7 +76,7 @@ const Hero = () => {
           >
             {/* Resume Button */}
             <a
-              href="/images/resume.pdf" 
+              href="/files/resume.pdf" 
               download
               className="flex items-center justify-center w-full sm:w-auto gap-2 px-6 py-3 bg-white text-black font-medium rounded-lg shadow-lg hover:bg-gray-100 transition-all duration-300"
             >
