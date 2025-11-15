@@ -66,7 +66,7 @@ Ensure you have [Node.js](https://nodejs.org/en/) (which includes `npm`) install
 
 This project is deployed using Vercel, ensuring seamless updates with every push to the `main` branch.
 
--   **Live Site:** [portfolio-prem-raichura](https://portfolio-prem-raichura.vercel.app/)
+-   **Live Site:** [portfolio-prem-raichura](https://premraichura.me/)
 
 ---
 
