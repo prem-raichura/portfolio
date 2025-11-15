@@ -1,6 +1,6 @@
 # Prem Raichura | Backend Developer Portfolio ✨
 
-### [🚀 Live Demo Here!](https://portfolio-prem-raichura.vercel.app/)
+### [🚀 Live Demo Here!](https://premraichura.me/)
 
 <!-- Badges for quick info -->
 [![Built With React](https://img.shields.io/badge/Built%20With-React-61DAFB?logo=react&logoColor=white)](https://react.dev/)
@@ -66,7 +66,7 @@ Ensure you have [Node.js](https://nodejs.org/en/) (which includes `npm`) install
 
 This project is deployed using Vercel, ensuring seamless updates with every push to the `main` branch.
 
--   **Live Site:** [portfolio-prem-raichura](https://premraichura.me/)
+-   **Live Site:** [Portfolio-Prem-Raichura](https://premraichura.me/)
 
 ---
 
