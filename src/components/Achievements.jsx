@@ -18,7 +18,7 @@ const achievementsData = [
       "/images/ach1_img5.jpg",
       "/images/ach1_img6.jpg",
     ],
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/posts/dhairya-darji-072428284_securepark-edgeai-iot-ugcPost-7395134624517140480-XXQC?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWrPP0BvxFARbxi45Dn_ZZJyLeGNqN4OI4",
   },
   {
     icon: <Brain  size={24} />,
