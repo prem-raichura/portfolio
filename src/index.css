@@ -19,6 +19,10 @@
   }
 }
 
+img {
+  image-rendering: auto;
+}
+
 /* Inside your global.css or index.css */
 .scrollbar-custom {
   scrollbar-width: thin;

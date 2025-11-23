@@ -35,19 +35,32 @@ const AchievementCard = ({ item, index, onClick }) => {
       {/* --- Image / Slider Section --- */}
       <div className="relative w-full h-72 md:h-80 lg:h-80 bg-transparent flex items-center justify-center">
         <AnimatePresence mode="wait">
-          <motion.img
+          <motion.picture
             key={currentSlide}
-            src={item.images[currentSlide]}
-            alt={item.title}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            variants={slideVariants}
-            transition={{
-              opacity: { duration: 1.2, ease: 'easeInOut' }, // slower fade transition
-            }}
-            className="object-contain w-full h-full"
-          />
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="flex items-center justify-center w-full h-full"
+          >
+            {/* Prefer WebP */}
+            <source
+              srcSet={item.images[currentSlide].replace(".jpg", ".webp")}
+              type="image/webp"
+            />
+
+            {/* JPG fallback */}
+            <img
+              src={item.images[currentSlide]}
+              alt={item.title}
+              loading="lazy"
+              className="
+                object-contain w-full h-full
+                blur-sm transition-all duration-500
+              "
+              onLoad={(e) => e.target.classList.remove("blur-sm")}
+            />
+          </motion.picture>
         </AnimatePresence>
       </div>
 

@@ -131,16 +131,32 @@ const AchievementModal = ({ item, onClose, allAchievements = [] }) => {
             className="relative w-full h-80 md:h-[22rem] rounded-xl mb-6 overflow-hidden border border-white/10 bg-transparent flex items-center justify-center shadow-inner"
           >
             <AnimatePresence mode="wait">
-              <motion.img
+              <motion.picture
                 key={currentSlide}
-                src={currentItem.images[currentSlide]}
-                alt={currentItem.title}
                 initial={{ opacity: 0, scale: 0.97 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.97 }}
-                transition={{ duration: 0.9, ease: "easeInOut" }}
-                className="max-w-full max-h-full object-contain transition-opacity duration-700"
-              />
+                transition={{ duration: 0.6, ease: "easeInOut" }}
+                className="flex items-center justify-center w-full h-full"
+              >
+                {/* WebP first */}
+                <source
+                  srcSet={currentItem.images[currentSlide].replace(".jpg", ".webp")}
+                  type="image/webp"
+                />
+
+                {/* JPG fallback */}
+                <img
+                  src={currentItem.images[currentSlide]}
+                  alt={currentItem.title}
+                  loading="lazy"
+                  className="
+                    max-w-full max-h-full object-contain 
+                    blur-md transition-all duration-500
+                  "
+                  onLoad={(e) => e.target.classList.remove("blur-md")}
+                />
+              </motion.picture>
             </AnimatePresence>
           </motion.div>
 
