@@ -19,7 +19,9 @@ function App() {
     <>
     {/* <Analytics /> */}
       <AnimatePresence>
-        {loading && <Loader onLoadingComplete={() => setLoading(false)} />}
+        {loading && (
+          <Loader key="hero-loader" onDone={() => setLoading(false)} />
+        )}
       </AnimatePresence>
       {!loading && (
         <>

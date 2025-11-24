@@ -19,6 +19,48 @@
   }
 }
 
+
+.skeleton-pro {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.skeleton-pro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.22) 45%,
+    transparent 95%
+  );
+  transform: translateX(-100%);
+  animation: shimmer-pro 1.4s ease-out infinite;
+}
+
+@keyframes shimmer-pro {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.polygon-10 {
+  clip-path: polygon(
+    50% 0%,
+    79% 10%,
+    95% 35%,
+    95% 65%,
+    79% 90%,
+    50% 100%,
+    21% 90%,
+    5% 65%,
+    5% 35%,
+    21% 10%
+  );
+}
+
 img {
   image-rendering: auto;
 }
