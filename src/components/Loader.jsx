@@ -5,7 +5,7 @@ const Loader = ({ onDone }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       onDone();
-    }, 2500);
+    }, 2000);
     return () => clearTimeout(timer);
   }, [onDone]);
 
