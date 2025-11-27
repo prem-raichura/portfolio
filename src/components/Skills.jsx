@@ -12,7 +12,7 @@ const skillsData = [
   {
     icon: <Server size={32} className="text-highlight" />,
     title: "Backend",
-    skills: ["Php", "Laravel", "Django", "Flask", "RESTful APIs"],
+    skills: ["Php", "Laravel", "Django", "Flask", "RESTful APIs", "Android"],
   },
   {
     icon: <BrainCircuit size={32} className="text-highlight" />,
