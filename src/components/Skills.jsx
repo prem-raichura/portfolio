@@ -1,86 +1,130 @@
-import React, { useRef } from 'react';
-import { motion, useMotionTemplate, useMotionValue } from 'framer-motion';
-import { Code, Server, Database, Cloud, BrainCircuit, PenTool } from 'lucide-react';
+import React, { useRef, useCallback } from "react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
+import { Code, Server, Database, Cloud, BrainCircuit } from "lucide-react";
 
-// Skills data analyzed from your profiles
+// icons defined once, not re-created on every render
+const iconMap = {
+  code: <Code size={32} className="text-highlight" />,
+  server: <Server size={32} className="text-highlight" />,
+  brain: <BrainCircuit size={32} className="text-highlight" />,
+  database: <Database size={32} className="text-highlight" />,
+  cloud: <Cloud size={32} className="text-highlight" />,
+};
+
+// Skills list (clean + stable)
 const skillsData = [
   {
-    icon: <Code size={32} className="text-highlight" />,
+    icon: iconMap.code,
     title: "Languages",
     skills: ["Python", "JavaScript", "SQL", "HTML/CSS"],
   },
   {
-    icon: <Server size={32} className="text-highlight" />,
+    icon: iconMap.server,
     title: "Backend",
     skills: ["Php", "Laravel", "Django", "Flask", "RESTful APIs", "Android"],
   },
   {
-    icon: <BrainCircuit size={32} className="text-highlight" />,
+    icon: iconMap.brain,
     title: "AI & Machine Learning",
     skills: ["TensorFlow", "PyTorch", "Pandas", "NumPy", "OpenCv"],
   },
   {
-    icon: <Database size={32} className="text-highlight" />,
+    icon: iconMap.database,
     title: "Databases",
     skills: ["MySQL", "Firebase"],
   },
   {
-    icon: <Cloud size={32} className="text-highlight" />,
-    title: "Version control",
+    icon: iconMap.cloud,
+    title: "Version Control",
     skills: ["Git", "GitHub"],
   },
   {
-    icon: <Code size={32} className="text-highlight" />,
+    icon: iconMap.code,
     title: "Frontend",
     skills: ["React.js", "Framer Motion", "Tailwind CSS"],
   },
 ];
 
-// Reusable SkillCard component with the new design
-const SkillCard = ({ category, index }) => {
+/* =================================================
+   Reusable SkillCard — optimized + memoized
+=================================================== */
+
+const SkillCard = React.memo(({ category, index }) => {
   const cardRef = useRef(null);
+
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const background = useMotionTemplate`radial-gradient(300px at ${mouseX}px ${mouseY}px, rgba(0, 229, 255, 0.1), transparent 80%)`;
 
-  const handleMouseMove = (e) => {
-    const rect = cardRef.current.getBoundingClientRect();
-    mouseX.set(e.clientX - rect.left);
-    mouseY.set(e.clientY - rect.top);
-  };
+  const background = useMotionTemplate`
+    radial-gradient(
+      300px at ${mouseX}px ${mouseY}px,
+      rgba(0, 229, 255, 0.1),
+      transparent 80%
+    )
+  `;
+
+  const handleMouseMove = useCallback(
+    (e) => {
+      const rect = cardRef.current.getBoundingClientRect();
+      mouseX.set(e.clientX - rect.left);
+      mouseY.set(e.clientY - rect.top);
+    },
+    [mouseX, mouseY]
+  );
 
   return (
     <motion.div
       key={index}
       ref={cardRef}
       onMouseMove={handleMouseMove}
-      className="group relative bg-secondary/60 backdrop-blur-xl rounded-xl p-8 border border-white/10 ring-1 ring-inset ring-white/10 transition-all duration-300 hover:shadow-2xl hover:shadow-highlight/20 overflow-hidden"
-      variants={{ hidden: { opacity: 0, y: 50 }, visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100 } } }}
+      className="group relative bg-secondary/60 backdrop-blur-xl rounded-xl p-8 
+                 border border-white/10 ring-1 ring-inset ring-white/10 
+                 transition-all duration-300 hover:shadow-2xl hover:shadow-highlight/20 
+                 overflow-hidden"
+      variants={{
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { type: "spring", stiffness: 100 },
+        },
+      }}
       whileHover={{ y: -8 }}
     >
       <motion.div
-        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 transition duration-300 group-hover:opacity-100"
+        className="pointer-events-none absolute -inset-px rounded-xl opacity-0 
+                   transition duration-300 group-hover:opacity-100"
         style={{ background }}
       />
+
       <div className="flex items-center gap-4 mb-6">
         <div className="transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
           {category.icon}
         </div>
         <h3 className="text-2xl font-bold text-text relative">
           {category.title}
-          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-highlight transition-all duration-300 group-hover:w-full"></span>
+          <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-highlight 
+                           transition-all duration-300 group-hover:w-full" />
         </h3>
       </div>
+
       <div className="flex flex-wrap gap-2">
-        {category.skills.map(skill => (
-          <div key={skill} className="bg-primary/70 text-creamm px-3 py-1 rounded-full text-sm">
+        {category.skills.map((skill) => (
+          <span
+            key={skill}
+            className="bg-primary/70 text-creamm px-3 py-1 rounded-full text-sm"
+          >
             {skill}
-          </div>
+          </span>
         ))}
       </div>
     </motion.div>
   );
-};
+});
+
+/* =================================================
+   Skills Section
+=================================================== */
 
 const Skills = () => {
   return (
@@ -92,13 +136,16 @@ const Skills = () => {
         viewport={{ once: true, amount: 0.1 }}
         transition={{ staggerChildren: 0.1 }}
       >
-        <motion.h2 
+        <motion.h2
           className="text-5xl font-bold text-center mb-16"
-          variants={{ hidden: { opacity: 0, y: -50 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5 } } }}
+          variants={{
+            hidden: { opacity: 0, y: -50 },
+            visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+          }}
         >
           My Technical Toolkit ⚙️
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillsData.map((category, i) => (
             <SkillCard key={i} category={category} index={i} />
